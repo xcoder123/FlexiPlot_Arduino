@@ -3,6 +3,7 @@
 
 #include "FlexiPlotBase.h"
 #include "FlexiTimePlot.h"
+#include "FlexiXYPlot.h"
 
 #include "FlexiAbstractSeries.h"
 #include "FlexiXYSeries.h"

@@ -1,5 +1,5 @@
-#ifndef FLEXIXYSERIES_H
-#define FLEXIXYSERIES_H
+#ifndef FLEXIBARSERIES_H
+#define FLEXIBARSERIES_H
 
 #include "FlexiAbstractSeries.h"
 
@@ -11,10 +11,10 @@ struct flexi_xy_data_t
     struct flexi_xy_data_t * next;
 };
 
-class FlexiXYSeries : public FlexiAbstractSeries
+class FlexiBarSeries : public FlexiAbstractSeries
 {
 public:
-    FlexiXYSeries(char * series_name);
+    FlexiBarSeries(char * series_name);
     
     FlexiXYSeries* addData(int y);
     FlexiXYSeries* addData(long y);

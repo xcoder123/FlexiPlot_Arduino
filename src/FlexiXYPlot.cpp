@@ -1,13 +1,44 @@
-#include "FlexiTimePlot.h"
+#include "FlexiXYPlot.h"
 
-FlexiTimePlot::FlexiTimePlot(char* id) 
-  : FlexiXYPlot(id)
+FlexiXYPlot::FlexiXYPlot(char* id) 
+  : FlexiPlotBase(id)
 {
   
 }
 
 
-void FlexiTimePlot::plot()
+FlexiXYSeries* FlexiXYPlot::addSeries(char * name)
+{
+  FlexiXYSeries* newSeries = new FlexiXYSeries(name);
+  FlexiPlotBase::addSeries( newSeries );
+
+  return newSeries;
+}
+
+FlexiXYSeries* FlexiXYPlot::series(uint8_t index)
+{
+  
+  FlexiAbstractSeries* abstractSeries = FlexiPlotBase::series(index);
+  if(abstractSeries == NULL)
+    return NULL;
+
+  FlexiXYSeries* series = static_cast<FlexiXYSeries*>(abstractSeries);
+  
+  return series;
+}
+
+FlexiXYSeries* FlexiXYPlot::seriesByName(const char * name)
+{
+  FlexiAbstractSeries* abstractSeries = FlexiPlotBase::seriesByName(name);
+  if(abstractSeries == NULL)
+    return NULL;
+
+  FlexiXYSeries* series = static_cast<FlexiXYSeries*>(abstractSeries);
+
+  return series;
+}
+
+void FlexiXYPlot::plot()
 {
   Serial.print('{');
   Serial.print(id);
@@ -18,8 +49,9 @@ void FlexiTimePlot::plot()
   s = seriesList;
   while (s != NULL)
   {
-    
+     
       FlexiXYSeries * series = static_cast<FlexiXYSeries*>( s->series );
+      
       if(series->count() > 0)
       {
         if(firstSeriesElement == true)
@@ -45,7 +77,9 @@ void FlexiTimePlot::plot()
             firstDataElement = false;
           else
             Serial.print(' ');
-  
+
+          Serial.print(d->x);
+          Serial.print(" ");
           Serial.print(d->y);
   
           d = d->next;

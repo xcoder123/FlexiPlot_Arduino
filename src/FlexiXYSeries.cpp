@@ -15,21 +15,21 @@ uint8_t FlexiXYSeries::count()
   return this->dataCount;
 }
 
-FlexiXYSeries* FlexiXYSeries::addData(int x)
+FlexiXYSeries* FlexiXYSeries::addData(int y)
 {
-  return addData((double)x, (double)0.0);
+  return addData((double)0.0, (double)y);
 }
-FlexiXYSeries* FlexiXYSeries::addData(long x)
+FlexiXYSeries* FlexiXYSeries::addData(long y)
 {
-  return addData((double)x, (double)0.0);
+  return addData((double)0.0, (double)y);
 }
-FlexiXYSeries* FlexiXYSeries::addData(double x)
+FlexiXYSeries* FlexiXYSeries::addData(double y)
 {
-  return addData(x, (double)0.0);
+  return addData((double)0.0, (double)y);
 }
-FlexiXYSeries* FlexiXYSeries::addData(float x)
+FlexiXYSeries* FlexiXYSeries::addData(float y)
 {
-  return addData((double)x, (double)0.0);
+  return addData((double)0.0, (double)y);
 }
 FlexiXYSeries* FlexiXYSeries::addData(int x, int y)
 {
@@ -45,7 +45,10 @@ FlexiXYSeries* FlexiXYSeries::addData(float x, float y)
 }
 
 FlexiXYSeries* FlexiXYSeries::addData(double x, double y)
-{
+{  
+//  Serial.print( x );
+//  Serial.print(":");
+//  Serial.println(y);
   flexi_xy_data_t* lElement = malloc(sizeof *lElement);
   
   lElement->x =  x;

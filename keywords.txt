@@ -6,6 +6,7 @@ FlexiTimePlot	KEYWORD1
 FlexiXYSeries	KEYWORD1
 FlexiAbstractSeries	KEYWORD1
 FlexiPlotBase	KEYWORD1
+FlexiXYPlot	KEYWORD1
 series_t	KEYWORD1
 flexi_xy_data_t	KEYWORD1
 
