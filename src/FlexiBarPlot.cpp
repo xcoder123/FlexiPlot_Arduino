@@ -217,14 +217,16 @@ void FlexiBarPlot::plot()
         else
           Serial.print('|');
 
+        Serial.print(series->getName());
+        Serial.print('|');
+        
         if(series->hasColor())
         {
           Serial.print( series->getColor() );
-          Serial.print( '{' );
+          Serial.print( '|' );
         }
 
-        Serial.print(series->getName());
-        Serial.print('|');
+        
   
         bool firstDataElement = true;
         flexi_bar_data_t* d;
