@@ -60,3 +60,9 @@ bool FlexiAbstractSeries::hasColor()
   return (color[0] != '\0');
 }
 
+FlexiAbstractSeries::~FlexiAbstractSeries()
+{
+  delete [] color;
+  delete [] series_name;
+}
+

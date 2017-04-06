@@ -10,6 +10,7 @@ class FlexiAbstractSeries
 {
 public:
     FlexiAbstractSeries(char * series_name);
+    ~FlexiAbstractSeries();
 
     char * getName();
   

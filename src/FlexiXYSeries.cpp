@@ -5,9 +5,6 @@ FlexiXYSeries::FlexiXYSeries(char * series_name)
 {  
   this->dataCount = 0;
   m_data = NULL;
-  Serial.print(series_name);
-  Serial.print( " " );
-  Serial.println( dataCount );
 }
 
 uint8_t FlexiXYSeries::count()
