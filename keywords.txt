@@ -9,6 +9,9 @@ FlexiPlotBase	KEYWORD1
 FlexiXYPlot	KEYWORD1
 series_t	KEYWORD1
 flexi_xy_data_t	KEYWORD1
+FlexiBarPlot	KEYWORD1
+FlexiBarSeries	KEYWORD1
+FlexiBarColumn	KEYWORD1
 
 ###################################################################
 # Methods and Functions
@@ -31,6 +34,11 @@ printID	KEYWORD2
 printSeries	KEYWORD2
 plot	KEYWORD2
 addData	KEYWORD2
+addColumn	KEYWORD2
+removeColumn	KEYWORD2
+columns	KEYWORD2
+columnIndex	KEYWORD2
+printColumns KEYWORD2
 
 ###################################################################
 # Constants
@@ -39,3 +47,4 @@ addData	KEYWORD2
 COLOR_STR_SIZE	LITERAL1
 SERIES_NAME_STR_SIZE	LITERAL1
 ID_STR_SIZE	LITERAL1
+BAR_NAME_STR_SIZE	LITERAL1
