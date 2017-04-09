@@ -3,12 +3,12 @@
 
 #include <Arduino.h>
 
-#define BAR_NAME_STR_SIZE     30
+#define BAR_NAME_STR_SIZE     32
 
 class FlexiBarColumn
 {
 public:
-    FlexiBarColumn(char * column_name);
+    FlexiBarColumn(const char * column_name);
     FlexiBarColumn::~FlexiBarColumn();
     char * getName();
   

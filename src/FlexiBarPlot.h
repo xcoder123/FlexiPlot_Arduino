@@ -16,13 +16,13 @@ struct flexi_bar_column_t
 class FlexiBarPlot : public FlexiPlotBase
 {
 public:
-    FlexiBarPlot(char* id = "P0");
+    FlexiBarPlot(const char* id = "P0");
 
-    FlexiBarPlot* addColumn(char * col_name);
+    FlexiBarPlot* addColumn(const char * col_name);
     void removeColumn(uint8_t index);
 
     uint8_t columns();
-    int8_t columnIndex(char * col_name); //If column can't be found it will return -1
+    int8_t columnIndex(const char * col_name); //If column can't be found it will return -1
     
     FlexiBarSeries* addSeries(char * name);
     FlexiBarSeries* series(uint8_t index);

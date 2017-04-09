@@ -1,13 +1,13 @@
 #include "FlexiPlotBase.h"
 
-FlexiPlotBase::FlexiPlotBase(char * id)
+FlexiPlotBase::FlexiPlotBase(const char * id)
 {
   strcpy(this->id, id);
   seriesList = NULL;
   seriesCount = 0;
 }
 
-void FlexiPlotBase::setID(char * id)
+void FlexiPlotBase::setID(const char * id)
 {
   memset(this->id, 0, ID_STR_SIZE);
   strcpy(this->id, id);

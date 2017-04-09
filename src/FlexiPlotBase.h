@@ -16,9 +16,9 @@ struct series_t
 class FlexiPlotBase
 {
 public:
-    FlexiPlotBase(char* id = "P0");
+    FlexiPlotBase(const char* id = "P0");
 
-    void setID(char* id);
+    void setID(const char* id);
 
     FlexiAbstractSeries* addSeries(FlexiAbstractSeries* series);
     uint8_t count(); //Returns number of series added to the list

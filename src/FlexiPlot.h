@@ -6,6 +6,7 @@
 #include "FlexiTimePlot.h"
 #include "FlexiXYPlot.h"
 #include "FlexiBarPlot.h"
+#include "FlexiPieChart.h"
 
 
 
@@ -13,5 +14,6 @@
 
 #include "FlexiXYSeries.h"
 #include "FlexiBarSeries.h"
+#include "FlexiPieSeries.h"
 
 #endif //FLEXIPLOT

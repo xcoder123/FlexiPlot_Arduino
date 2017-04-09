@@ -1,13 +1,13 @@
 #include "FlexiBarPlot.h"
 
-FlexiBarPlot::FlexiBarPlot(char* id) 
+FlexiBarPlot::FlexiBarPlot(const char* id) 
   : FlexiPlotBase(id)
 {
   m_columns = NULL;
   columnCount = 0;
 }
 
-FlexiBarPlot* FlexiBarPlot::addColumn(char * col_name)
+FlexiBarPlot* FlexiBarPlot::addColumn(const char * col_name)
 {  
   flexi_bar_column_t* lElement = malloc(sizeof *lElement);
 
@@ -139,7 +139,7 @@ uint8_t FlexiBarPlot::columns()
   return this->columnCount;
 }
 
-int8_t FlexiBarPlot::columnIndex(char * col_name)
+int8_t FlexiBarPlot::columnIndex(const char * col_name)
 {
   int8_t cId = 0;
   flexi_bar_column_t* p;

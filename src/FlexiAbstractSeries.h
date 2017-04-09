@@ -4,18 +4,18 @@
 #include <Arduino.h>
 
 #define COLOR_STR_SIZE                    11 //255,255,255 this is the largest color string you can have
-#define SERIES_NAME_STR_SIZE              255
+#define SERIES_NAME_STR_SIZE              32
 
 class FlexiAbstractSeries
 {
 public:
-    FlexiAbstractSeries(char * series_name);
+    FlexiAbstractSeries(const char * series_name);
     ~FlexiAbstractSeries();
 
     char * getName();
   
     void setColor(uint8_t red, uint8_t green, uint8_t blue);
-    void setColor(char * htmlColor);
+    void setColor(const char * htmlColor);
     char* getColor();
     bool hasColor();
 
