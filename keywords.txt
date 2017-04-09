@@ -12,6 +12,8 @@ flexi_xy_data_t	KEYWORD1
 FlexiBarPlot	KEYWORD1
 FlexiBarSeries	KEYWORD1
 FlexiBarColumn	KEYWORD1
+FlexiPieChart	KEYWORD1
+FlexiPieSeries	KEYWORD1
 
 ###################################################################
 # Methods and Functions
