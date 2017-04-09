@@ -1,6 +1,6 @@
 #include "FlexiXYSeries.h"
 
-FlexiXYSeries::FlexiXYSeries(const char * series_name)
+FlexiXYSeries::FlexiXYSeries(char * series_name)
   : FlexiAbstractSeries(series_name)
 {  
   this->dataCount = 0;

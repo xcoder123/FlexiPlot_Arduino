@@ -1,6 +1,6 @@
 #include "FlexiTimePlot.h"
 
-FlexiTimePlot::FlexiTimePlot(const char* id) 
+FlexiTimePlot::FlexiTimePlot(char* id)
   : FlexiXYPlot(id)
 {
   

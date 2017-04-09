@@ -1,6 +1,6 @@
 #include "FlexiBarColumn.h"
 
-FlexiBarColumn::FlexiBarColumn(const char * column_name)
+FlexiBarColumn::FlexiBarColumn(char * column_name)
 {
   strcpy(this->column_name, column_name);
 }

@@ -27,7 +27,7 @@ FlexiXYSeries* FlexiXYPlot::series(uint8_t index)
   return series;
 }
 
-FlexiXYSeries* FlexiXYPlot::seriesByName(const char * name)
+FlexiXYSeries* FlexiXYPlot::seriesByName(char * name)
 {
   FlexiAbstractSeries* abstractSeries = FlexiPlotBase::seriesByName(name);
   if(abstractSeries == NULL)

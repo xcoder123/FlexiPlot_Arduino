@@ -7,7 +7,7 @@
 class FlexiTimePlot : public FlexiXYPlot
 {
 public:
-    FlexiTimePlot(const char* id = "P0");
+    FlexiTimePlot(char* id = "P0");
 
     void plot();
 };

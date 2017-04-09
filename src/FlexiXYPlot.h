@@ -11,7 +11,7 @@ public:
     
     FlexiXYSeries* addSeries(char * name);
     FlexiXYSeries* series(uint8_t index);
-    FlexiXYSeries* seriesByName(const char * name);
+    FlexiXYSeries* seriesByName(char * name);
 
     void plot();
 };

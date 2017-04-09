@@ -1,6 +1,6 @@
 #include "FlexiPieSeries.h"
 
-FlexiPieSeries::FlexiPieSeries(const char * series_name)
+FlexiPieSeries::FlexiPieSeries(char * series_name)
   : FlexiAbstractSeries(series_name)
 {    
   m_value = 0.0;

@@ -16,19 +16,19 @@ struct series_t
 class FlexiPlotBase
 {
 public:
-    FlexiPlotBase(const char* id = "P0");
+    FlexiPlotBase(char* id = "P0");
 
-    void setID(const char* id);
+    void setID(char* id);
 
     FlexiAbstractSeries* addSeries(FlexiAbstractSeries* series);
     uint8_t count(); //Returns number of series added to the list
 
     FlexiAbstractSeries* series(uint8_t index);
-    FlexiAbstractSeries* seriesByName(const char * name);
+    FlexiAbstractSeries* seriesByName(char * name);
 
     void removeAllSeries();
     void removeSeries(uint8_t index);
-    void removeSeriesByName(const char * name);
+    void removeSeriesByName(char * name);
     
     void printID();
     void printSeries(); //Prints the names of the series

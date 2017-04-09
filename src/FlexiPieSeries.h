@@ -7,7 +7,7 @@ class FlexiPieSeries : public FlexiAbstractSeries
 {
   
 public:
-    FlexiPieSeries(const char * series_name);
+    FlexiPieSeries(char * series_name);
 
     void setValue(long value);
     void setValue(int value);

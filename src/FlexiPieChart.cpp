@@ -1,13 +1,13 @@
 #include "FlexiPieChart.h"
 
-FlexiPieChart::FlexiPieChart(const char* id) 
+FlexiPieChart::FlexiPieChart(char* id)
   : FlexiPlotBase(id)
 {
   
 }
 
 
-FlexiPieSeries* FlexiPieChart::addSeries(const char * name)
+FlexiPieSeries* FlexiPieChart::addSeries(char * name)
 {
   FlexiPieSeries* newSeries = new FlexiPieSeries(name);
   FlexiPlotBase::addSeries( newSeries );
@@ -26,7 +26,7 @@ FlexiPieSeries* FlexiPieChart::series(uint8_t index)
   return series;
 }
 
-FlexiPieSeries* FlexiPieChart::seriesByName(const char * name)
+FlexiPieSeries* FlexiPieChart::seriesByName(char * name)
 {
   FlexiAbstractSeries* abstractSeries = FlexiPlotBase::seriesByName(name);
   if(abstractSeries == NULL)

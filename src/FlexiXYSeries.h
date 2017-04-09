@@ -14,7 +14,7 @@ struct flexi_xy_data_t
 class FlexiXYSeries : public FlexiAbstractSeries
 {
 public:
-    FlexiXYSeries(const char * series_name);
+    FlexiXYSeries(char * series_name);
     
     FlexiXYSeries* addData(int y);
     FlexiXYSeries* addData(long y);

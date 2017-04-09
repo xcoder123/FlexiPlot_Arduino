@@ -14,7 +14,7 @@ class FlexiBarSeries : public FlexiAbstractSeries
 {
   
 public:
-    FlexiBarSeries(const char * series_name);
+    FlexiBarSeries(char * series_name);
 
     FlexiBarSeries* setValue(uint8_t col_index, long value);
     FlexiBarSeries* setValue(uint8_t col_index, int value);

@@ -1,6 +1,6 @@
 #include "FlexiBarSeries.h"
 
-FlexiBarSeries::FlexiBarSeries(const char * series_name)
+FlexiBarSeries::FlexiBarSeries(char * series_name)
   : FlexiAbstractSeries(series_name)
 {  
   this->dataCount = 0;
