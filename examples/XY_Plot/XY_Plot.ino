@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
 
-  xyPlotExample(k++/7);
+  xyPlotExample(k++%7);
 
   delay(1000);
 
