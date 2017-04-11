@@ -1,6 +1,6 @@
 #include "FlexiBarSeries.h"
 
-FlexiBarSeries::FlexiBarSeries(char * series_name)
+FlexiBarSeries::FlexiBarSeries(const char * series_name)
   : FlexiAbstractSeries(series_name)
 {  
   this->dataCount = 0;
@@ -14,17 +14,17 @@ uint8_t FlexiBarSeries::count()
 
 FlexiBarSeries* FlexiBarSeries::setValue(uint8_t col_index, long value)
 {
-  setValue(col_index, (double)value);
+  return setValue(col_index, (double)value);
 }
 
 FlexiBarSeries* FlexiBarSeries::setValue(uint8_t col_index, int value)
 {
-  setValue(col_index, (double)value);
+  return setValue(col_index, (double)value);
 }
 
 FlexiBarSeries* FlexiBarSeries::setValue(uint8_t col_index, float value)
 {
-  setValue(col_index, (double)value);
+  return setValue(col_index, (double)value);
 }
 
 FlexiBarSeries* FlexiBarSeries::setValue(uint8_t col_index, double value)
@@ -48,7 +48,7 @@ FlexiBarSeries* FlexiBarSeries::setValue(uint8_t col_index, double value)
 
 void FlexiBarSeries::addColumn()
 {  
-  flexi_bar_data_t* lElement = malloc(sizeof *lElement);
+  flexi_bar_data_t* lElement = new flexi_bar_data_t;/*malloc(sizeof *lElement);*/
   
   lElement->value = 0.0;
   lElement->next = NULL;

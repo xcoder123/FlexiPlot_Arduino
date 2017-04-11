@@ -1,13 +1,13 @@
 #include "FlexiXYPlot.h"
 
-FlexiXYPlot::FlexiXYPlot(char* id) 
+FlexiXYPlot::FlexiXYPlot(const char* id)
   : FlexiPlotBase(id)
 {
   
 }
 
 
-FlexiXYSeries* FlexiXYPlot::addSeries(char * name)
+FlexiXYSeries* FlexiXYPlot::addSeries(const char * name)
 {
   FlexiXYSeries* newSeries = new FlexiXYSeries(name);
   FlexiPlotBase::addSeries( newSeries );
@@ -27,7 +27,7 @@ FlexiXYSeries* FlexiXYPlot::series(uint8_t index)
   return series;
 }
 
-FlexiXYSeries* FlexiXYPlot::seriesByName(char * name)
+FlexiXYSeries* FlexiXYPlot::seriesByName(const char * name)
 {
   FlexiAbstractSeries* abstractSeries = FlexiPlotBase::seriesByName(name);
   if(abstractSeries == NULL)

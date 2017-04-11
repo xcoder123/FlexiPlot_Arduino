@@ -7,11 +7,11 @@
 class FlexiXYPlot : public FlexiPlotBase
 {
 public:
-    FlexiXYPlot(char* id = "P0");
+    FlexiXYPlot(const char* id = "P0");
     
-    FlexiXYSeries* addSeries(char * name);
+    FlexiXYSeries* addSeries(const char * name);
     FlexiXYSeries* series(uint8_t index);
-    FlexiXYSeries* seriesByName(char * name);
+    FlexiXYSeries* seriesByName(const char * name);
 
     void plot();
 };

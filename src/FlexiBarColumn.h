@@ -8,8 +8,8 @@
 class FlexiBarColumn
 {
 public:
-    FlexiBarColumn(char * column_name);
-    FlexiBarColumn::~FlexiBarColumn();
+    FlexiBarColumn(const char * column_name);
+    ~FlexiBarColumn();
     char * getName();
   
 protected:

@@ -7,11 +7,11 @@
 class FlexiPieChart : public FlexiPlotBase
 {
 public:
-    FlexiPieChart(char* id = "P0");
+    FlexiPieChart(const char* id = "P0");
     
-    FlexiPieSeries* addSeries(char * name);
+    FlexiPieSeries* addSeries(const char * name);
     FlexiPieSeries* series(uint8_t index);
-    FlexiPieSeries* seriesByName(char * name);
+    FlexiPieSeries* seriesByName(const char * name);
 
     void plot();
 };

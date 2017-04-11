@@ -1,15 +1,15 @@
 #include "FlexiBarPlot.h"
 
-FlexiBarPlot::FlexiBarPlot(char* id)
+FlexiBarPlot::FlexiBarPlot(const char* id)
   : FlexiPlotBase(id)
 {
   m_columns = NULL;
   columnCount = 0;
 }
 
-FlexiBarPlot* FlexiBarPlot::addColumn(char * col_name)
+FlexiBarPlot* FlexiBarPlot::addColumn(const char * col_name)
 {  
-  flexi_bar_column_t* lElement = malloc(sizeof *lElement);
+  flexi_bar_column_t* lElement = new flexi_bar_column_t;/* malloc(sizeof *lElement);*/
 
   FlexiBarColumn * newColumn = new FlexiBarColumn( col_name );
 
@@ -139,7 +139,7 @@ uint8_t FlexiBarPlot::columns()
   return this->columnCount;
 }
 
-int8_t FlexiBarPlot::columnIndex(char * col_name)
+int8_t FlexiBarPlot::columnIndex(const char * col_name)
 {
   int8_t cId = 0;
   flexi_bar_column_t* p;
@@ -159,7 +159,7 @@ int8_t FlexiBarPlot::columnIndex(char * col_name)
 }
 
 
-FlexiBarSeries* FlexiBarPlot::addSeries(char * name)
+FlexiBarSeries* FlexiBarPlot::addSeries(const char * name)
 {
   FlexiBarSeries* newSeries = new FlexiBarSeries(name);
   FlexiPlotBase::addSeries( newSeries );
@@ -182,7 +182,7 @@ FlexiBarSeries* FlexiBarPlot::series(uint8_t index)
   return series;
 }
 
-FlexiBarSeries* FlexiBarPlot::seriesByName(char * name)
+FlexiBarSeries* FlexiBarPlot::seriesByName(const char * name)
 {
   FlexiAbstractSeries* abstractSeries = FlexiPlotBase::seriesByName(name);
   if(abstractSeries == NULL)

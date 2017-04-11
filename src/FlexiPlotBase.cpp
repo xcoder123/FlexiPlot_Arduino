@@ -1,13 +1,13 @@
 #include "FlexiPlotBase.h"
 
-FlexiPlotBase::FlexiPlotBase(char * id)
+FlexiPlotBase::FlexiPlotBase(const char * id)
 {
   strcpy(this->id, id);
   seriesList = NULL;
   seriesCount = 0;
 }
 
-void FlexiPlotBase::setID(char * id)
+void FlexiPlotBase::setID(const char * id)
 {
   memset(this->id, 0, ID_STR_SIZE);
   strcpy(this->id, id);
@@ -16,7 +16,7 @@ void FlexiPlotBase::setID(char * id)
 
 FlexiAbstractSeries* FlexiPlotBase::addSeries(FlexiAbstractSeries* series)
 {
-  series_t* lElement = malloc(sizeof *lElement);
+  series_t* lElement = new series_t;/* malloc(sizeof *lElement);*/
   
   lElement->series =  series;
   lElement->next = NULL;
@@ -86,7 +86,7 @@ FlexiAbstractSeries* FlexiPlotBase::series(uint8_t index)
   return NULL;
 }
 
-FlexiAbstractSeries* FlexiPlotBase::seriesByName(char * name)
+FlexiAbstractSeries* FlexiPlotBase::seriesByName(const char * name)
 {
   series_t* p;
   p = seriesList;
@@ -164,7 +164,7 @@ void FlexiPlotBase::removeSeries(uint8_t index)
   }
 }
 
-void FlexiPlotBase::removeSeriesByName(char * name)
+void FlexiPlotBase::removeSeriesByName(const char * name)
 {
   series_t* p;
   p = seriesList;

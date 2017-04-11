@@ -1,6 +1,6 @@
 #include "FlexiXYSeries.h"
 
-FlexiXYSeries::FlexiXYSeries(char * series_name)
+FlexiXYSeries::FlexiXYSeries(const char * series_name)
   : FlexiAbstractSeries(series_name)
 {  
   this->dataCount = 0;
@@ -43,10 +43,7 @@ FlexiXYSeries* FlexiXYSeries::addData(float x, float y)
 
 FlexiXYSeries* FlexiXYSeries::addData(double x, double y)
 {  
-//  Serial.print( x );
-//  Serial.print(":");
-//  Serial.println(y);
-  flexi_xy_data_t* lElement = malloc(sizeof *lElement);
+  flexi_xy_data_t* lElement = new flexi_xy_data_t;/*malloc(sizeof *lElement);*/
   
   lElement->x =  x;
   lElement->y =  y;

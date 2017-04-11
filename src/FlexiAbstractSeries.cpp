@@ -1,6 +1,6 @@
 #include "FlexiAbstractSeries.h"
 
-FlexiAbstractSeries::FlexiAbstractSeries(char * series_name)
+FlexiAbstractSeries::FlexiAbstractSeries(const char * series_name)
 {
   memset(this->color, 0, COLOR_STR_SIZE);
   strcpy(this->series_name, series_name);
@@ -33,7 +33,7 @@ void FlexiAbstractSeries::setColor(uint8_t red, uint8_t green, uint8_t blue)
   strcat(this->color, numBuffer);
 }
 
-void FlexiAbstractSeries::setColor(char * htmlColor)
+void FlexiAbstractSeries::setColor(const char * htmlColor)
 {
   if(strlen(htmlColor) != 7)
   {
@@ -62,7 +62,7 @@ bool FlexiAbstractSeries::hasColor()
 
 FlexiAbstractSeries::~FlexiAbstractSeries()
 {
-  delete [] color;
-  delete [] series_name;
+  free( color );
+  free( series_name );
 }
 

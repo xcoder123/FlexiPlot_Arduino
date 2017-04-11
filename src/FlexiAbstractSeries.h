@@ -9,13 +9,13 @@
 class FlexiAbstractSeries
 {
 public:
-    FlexiAbstractSeries(char * series_name);
-    ~FlexiAbstractSeries();
+    FlexiAbstractSeries(const char * series_name);
+    virtual ~FlexiAbstractSeries();
 
     char * getName();
   
     void setColor(uint8_t red, uint8_t green, uint8_t blue);
-    void setColor(char * htmlColor);
+    void setColor(const char * htmlColor);
     char* getColor();
     bool hasColor();
 
