@@ -40,7 +40,7 @@ addColumn	KEYWORD2
 removeColumn	KEYWORD2
 columns	KEYWORD2
 columnIndex	KEYWORD2
-printColumns KEYWORD2
+printColumns	KEYWORD2
 
 ###################################################################
 # Constants
